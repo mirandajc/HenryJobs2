@@ -50,7 +50,15 @@ const getAllFollow_routes_1 = __importDefault(require("./follow/getAllFollow.rou
 const createFollow_routes_1 = __importDefault(require("./follow/createFollow.routes"));
 router.use('/follow', getAllFollow_routes_1.default);
 router.use('/follow', createFollow_routes_1.default);
-//
+//comments
 const createComment_routes_1 = __importDefault(require("./Comment/createComment.routes"));
+const deleteComment_routes_1 = __importDefault(require("./Comment/deleteComment.routes"));
+const updateComment_routes_1 = __importDefault(require("./Comment/updateComment.routes"));
+const getCommentId_routes_1 = __importDefault(require("./Comment/getCommentId.routes"));
+const getAllComment_routes_1 = __importDefault(require("./Comment/getAllComment.routes"));
+router.use('/comment', deleteComment_routes_1.default);
 router.use('/comment', createComment_routes_1.default);
+router.use('/comment', updateComment_routes_1.default);
+router.use('/comment/:id', getCommentId_routes_1.default);
+router.use('/comment', getAllComment_routes_1.default);
 exports.default = router;

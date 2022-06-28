@@ -30,15 +30,6 @@ var UserTypes;
     UserTypes[UserTypes["Business"] = 4] = "Business"; //5
 })(UserTypes || (UserTypes = {}));
 let User = class User {
-    // @prop()
-    // follow: string[]
-    //business
-    // @prop({})
-    // name: string;
-    // @prop({})
-    // jobSummary: string
-    // @prop({})
-    // description: string;
     validatePassword(candidatePassword) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
@@ -89,8 +80,12 @@ __decorate([
 ], User.prototype, "technologies", void 0);
 __decorate([
     (0, typegoose_1.prop)({}),
-    __metadata("design:type", String)
+    __metadata("design:type", Object)
 ], User.prototype, "country", void 0);
+__decorate([
+    (0, typegoose_1.prop)(),
+    __metadata("design:type", Object)
+], User.prototype, "city", void 0);
 __decorate([
     (0, typegoose_1.prop)({}),
     __metadata("design:type", String)
@@ -123,6 +118,18 @@ __decorate([
     (0, typegoose_1.prop)(),
     __metadata("design:type", Array)
 ], User.prototype, "follows", void 0);
+__decorate([
+    (0, typegoose_1.prop)({}),
+    __metadata("design:type", String)
+], User.prototype, "name", void 0);
+__decorate([
+    (0, typegoose_1.prop)({}),
+    __metadata("design:type", String)
+], User.prototype, "jobSummary", void 0);
+__decorate([
+    (0, typegoose_1.prop)({}),
+    __metadata("design:type", String)
+], User.prototype, "description", void 0);
 User = __decorate([
     (0, typegoose_1.pre)("save", function (next) {
         return __awaiter(this, void 0, void 0, function* () {

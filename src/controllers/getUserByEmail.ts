@@ -32,6 +32,7 @@ export const getUserEmail = async (req: Request, res: Response) => {
             res.status(200).json(allEmail)
         }
     }
+    
 
 
 }
