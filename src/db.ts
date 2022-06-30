@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const { CLUSTER_NAME, PASSWORD, USER } = process.env;
 
-const ATLAS = `mongodb+srv://${USER}:${PASSWORD}@${CLUSTER_NAME}.uyoyee0.mongodb.net/?retryWrites=true&w=majority`;
+const ATLAS = `mongodb+srv://doadmin:V27xO964i31Be5jU@db-mongodb-henryjobs-232c53bd.mongo.ondigitalocean.com/admin?tls=true&authSource=admin`;
 
 async function dbConnect () {
     try {
