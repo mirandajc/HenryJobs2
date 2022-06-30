@@ -9,7 +9,7 @@
     "yarn": "1.22.19"
   },
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "dist/index.js",
     "build": "yarn install && tsc",
     "dev": "tsc-watch --onSuccess \"node dist/index.js\" "
   },
