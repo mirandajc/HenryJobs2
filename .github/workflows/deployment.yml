@@ -15,7 +15,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "henry-app-project" #Must be unique in Heroku
           heroku_email: "jocelyn@mirandajc.com"
-          appdir: "api"
+          # appdir: "api"
         env:
           NODE_ENV: production
           USER: henry
