@@ -1,0 +1,29 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "henry-app-project" #Must be unique in Heroku
+          heroku_email: "jocelyn@mirandajc.com"
+          appdir: "api"
+        env:
+          NODE_ENV: production
+          USER: henry
+          PASSWORD: ${{secrets.PASSWORD}}
+          CLUSTER_NAME: ${{secrets.CLUSTER_NAME}}
+          PORT: 80
+          CLOUDINARY_CLOUD_NAME: ${{secrets.CLOUDINARY_CLOUD_NAME}}
+          CLOUDINARY_API_KEY: 716928273215674
+          CLOUDINARY_API_SECRET: ${{secrets.CLOUDINARY_API_SECRET}}   
+          TOKEN_SECRET: ${{secrets.TOKEN_SECRET}}   
+          
